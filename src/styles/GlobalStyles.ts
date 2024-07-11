@@ -54,13 +54,24 @@ const GlobalStyles = createGlobalStyle`
   }
 }
 
+html{
+  font-size: 62.5%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--color-grey-600);
 
-  transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s, transform 0.35s ease-in-out;
   line-height: 1.5;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 
 input,

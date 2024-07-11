@@ -1,17 +1,26 @@
-import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
-
-const H1 = styled.h1`
-  font-size: 48px;
-  text-align: center;
-  color: var(--color-red-700);
-`;
+import Home from "./pages/Home";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
+import LandingPageLayout from "./Components/LandingPageLayout";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <H1>Hello World</H1>
+      <Router>
+        <Routes>
+          <Route element={<LandingPageLayout />}>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Navigate to="/" replace />} />
+          </Route>
+          <Route path="*" element={<span>NOT FOUND</span>} />
+        </Routes>
+      </Router>
     </>
   );
 }
