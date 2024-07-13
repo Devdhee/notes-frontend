@@ -5,7 +5,7 @@ import backgroundImage from "../assets/Rows.svg";
 
 const Container = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center;

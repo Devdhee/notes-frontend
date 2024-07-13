@@ -10,7 +10,7 @@ const sizes = {
   `,
   medium: css`
     font-size: 1.4rem;
-    padding: 1.2rem 1.6rem;
+    padding: 1rem 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
