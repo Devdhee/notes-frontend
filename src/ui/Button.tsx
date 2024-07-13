@@ -28,21 +28,23 @@ const variations = {
   primary: css`
     color: var(--color-grey-50);
     background-color: var(--color-grey-600);
-    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    transition: all 0.3s ease;
 
     &:hover {
-      background-color: var(--color-grey-600);
-      border: 1px solid var(--color-grey-100);
+      background-color: var(--color-grey-500);
     }
   `,
   secondary: css`
-    color: var(--color-grey-50);
+    color: var(--color-grey-600);
     background: transparent;
-    border: 1px solid var(--color-grey-100);
+    border-radius: 1.5rem;
+    border: 1px solid var(--color-grey-600);
+    transition: all 0.3s ease;
 
     &:hover {
-      background-color: var(--color-grey-50);
-      color: var(--color-grey-600);
+      color: var(--color-grey-50);
+      background-color: var(--color-grey-600);
     }
   `,
   danger: css`

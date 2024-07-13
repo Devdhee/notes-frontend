@@ -1,12 +1,9 @@
 import GlobalStyles from "./styles/GlobalStyles";
 import Home from "./pages/Home";
-import {
-  Navigate,
-  Route,
-  BrowserRouter as Router,
-  Routes,
-} from "react-router-dom";
-import LandingPageLayout from "./Components/LandingPageLayout";
+import Signup from "./pages/Signup";
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -14,10 +11,9 @@ function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route element={<LandingPageLayout />}>
-            <Route index element={<Home />} />
-            <Route path="home" element={<Navigate to="/" replace />} />
-          </Route>
+          <Route index element={<Home />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<span>NOT FOUND</span>} />
         </Routes>
       </Router>
