@@ -6,6 +6,14 @@ const StyledLogo = styled.a`
   font-weight: 600;
   font-family: "Playwrite FR Trad", cursive;
   font-optical-sizing: auto;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 475px) {
+    font-size: 1.8rem;
+  }
 `;
 function Logo() {
   return <StyledLogo href="/"> Notes.</StyledLogo>;
