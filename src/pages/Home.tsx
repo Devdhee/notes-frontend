@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 import backgroundImage from "../assets/Rows.svg";
+import Logo from "../Components/Logo";
 
 const Container = styled.section`
   width: 100vw;
@@ -65,12 +66,6 @@ const NavBar = styled.nav`
   }
 `;
 
-const Logo = styled.a`
-  font-size: 2.5rem;
-  color: var(--color-grey-600);
-  font-weight: 600;
-`;
-
 const HeroContainer = styled.div`
   padding: 2rem;
   max-width: 140rem;
@@ -128,7 +123,7 @@ function Home() {
   return (
     <Container>
       <NavBar>
-        <Logo href="/">📝 Notes.</Logo>
+        <Logo />
         <Link to="/login">
           <Button variation="secondary">Login</Button>
         </Link>
@@ -141,7 +136,7 @@ function Home() {
         </HeroSubtext>
 
         <HeroCTA>
-          <Link to="/signup">
+          <Link to="/dashboard">
             <Button variation="primary" size="large">
               Get Started
             </Button>
