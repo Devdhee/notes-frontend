@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Input from "../ui/Input";
 import Logo from "./Logo";
+import { HomeIcon, NotebookPen, PlusIcon, User } from "lucide-react";
 
 const Container = styled.div`
   width: 100vw;
@@ -73,16 +74,19 @@ const StyledMain = styled.main`
 const AppFooter = styled.nav`
   width: 100%;
   padding: 2rem;
+  display: flex;
   box-shadow: -3px -3px 5px -4px rgba(74, 74, 74, 0.34);
   -webkit-box-shadow: -3px -3px 5px -4px rgba(74, 74, 74, 0.34);
   -moz-box-shadow: -3px -3px 5px -4px rgba(74, 74, 74, 0.34);
 `;
 
 const NavBar = styled.ul`
-  max-width: 120rem;
+  max-width: 70rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -100,23 +104,19 @@ const StyledNavLink = styled(NavLink)`
 
     /* Small laptop */
     @media screen and (max-width: 73.75em) {
-      grid-template-columns: 24rem 1fr;
     }
 
-    /* Tablet */
     @media screen and (max-width: 69.4em) {
-      grid-row: 3;
     }
   }
 
-  /* This works because react-router places the active class on the active NavLink */
   &:hover,
   &:active,
   &.active:link,
   &.active:visited {
-    color: var(--color-grey-800);
-    background-color: var(--color-grey-50);
-    border-radius: var(--border-radius-sm);
+    color: var(--color-grey-100);
+    background-color: var(--color-grey-600);
+    border-radius: 1rem;
   }
 
   & svg {
@@ -124,6 +124,9 @@ const StyledNavLink = styled(NavLink)`
     height: 2.4rem;
     color: var(--color-grey-400);
     transition: all 0.3s;
+
+    @media screen and (max-width: 69.4em) {
+    }
   }
 
   &:hover svg,
@@ -131,6 +134,12 @@ const StyledNavLink = styled(NavLink)`
   &.active:link svg,
   &.active:visited svg {
     color: var(--color-brand-600);
+  }
+`;
+
+const NavLinkText = styled.span`
+  @media (max-width: 475px) {
+    display: none;
   }
 `;
 
@@ -156,8 +165,22 @@ function AppLayout() {
         <NavBar>
           <li>
             <StyledNavLink to="/dashboard">
-              {/* <HiOutlineHome /> */}
-              <span>Home</span>
+              <HomeIcon />
+              <NavLinkText>Home</NavLinkText>
+            </StyledNavLink>
+          </li>
+
+          <li>
+            <StyledNavLink to="/new">
+              <NotebookPen />
+              <NavLinkText>New Note</NavLinkText>
+            </StyledNavLink>
+          </li>
+
+          <li>
+            <StyledNavLink to="/me">
+              <User />
+              <NavLinkText>Me</NavLinkText>
             </StyledNavLink>
           </li>
         </NavBar>

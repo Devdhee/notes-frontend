@@ -6,6 +6,8 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import AppLayout from "./Components/AppLayout";
 import Dashboard from "./pages/Dashboard";
+import NewNote from "./pages/NewNote";
+import AboutUser from "./pages/AboutUser";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="dashboard" element={<Dashboard />} />
+            <Route path="new" element={<NewNote />} />
+            <Route path="me" element={<AboutUser />} />
           </Route>
           <Route index element={<Home />} />
           <Route path="signup" element={<Signup />} />
