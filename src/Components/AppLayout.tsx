@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Input from "../ui/Input";
 import Logo from "./Logo";
-import { HomeIcon, NotebookPen, PlusIcon, User } from "lucide-react";
+import { HomeIcon, NotebookPen, User } from "lucide-react";
 
 const Container = styled.div`
   width: 100vw;
