@@ -1,5 +1,11 @@
+import TipTap from "../Components/TipTap";
+
 function NewNote() {
-  return <div></div>;
+  return (
+    <div>
+      <TipTap />
+    </div>
+  );
 }
 
 export default NewNote;
