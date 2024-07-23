@@ -125,6 +125,103 @@ h6 {
   overflow-wrap: break-word;
   hyphens: auto;
 }
+
+.tiptap {
+border: .15rem solid;
+background-color: white;
+padding: 2rem 1rem;
+border-radius: 1rem;
+min-height: 20rem;
+
+&active, &focus, &hover{
+  /* border: .15rem solid var(--color-blue-100); */
+}
+
+  :first-child {
+    margin-top: 0;
+  }
+
+
+  ul, 
+  ol {
+    padding: 0 1rem;
+    margin: 1.5rem 1rem 1.5rem 0.4rem;
+    
+    li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+ 
+  h1 {
+    line-height: 1.1;
+    margin-top: 2.5rem;
+  }
+
+  h1 {
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 { 
+    font-size: 2rem; 
+  }
+
+
+ 
+  code {
+    background-color: var(--color-grey-50);
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.25em 0.3em;
+  }
+
+  pre {
+    background: #222222;
+    border-radius: 0.5rem;
+    color: white;
+    font-family: 'JetBrainsMono', monospace;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+
+    code {
+      background: none;
+      color: inherit;
+      font-size: 1.2rem;
+      padding: 0;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid var(--color-blue-700);
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+   } 
+   }
+
+   .control-group{
+    margin-bottom: 2.5rem;
+   }
+
+   .button-group{
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+
+     button{
+       padding: .25rem .5rem;
+       border-radius: 0.5rem;
+       font-size: .5rem;
+       cursor: pointer;
+
+       &.is-active{
+         background-color: white;
+         color: var(--white);
+       }
+     }
+   }
 `;
 
 export default GlobalStyles;

@@ -18,7 +18,7 @@ const InputWrapper = styled.div`
 
 const Label = styled.label`
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333;
 `;
 
@@ -26,7 +26,7 @@ const StyledInput = styled.input`
   padding: 1rem 2.5rem;
   font-size: 1.3rem;
   border: 1px solid #ccc;
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: 100%;
 
   &:focus {
