@@ -28,7 +28,7 @@ const variations = {
   primary: css`
     color: var(--color-grey-50);
     background-color: var(--color-grey-600);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     transition: all 0.3s ease;
 
     &:hover {
@@ -38,7 +38,7 @@ const variations = {
   secondary: css`
     color: var(--color-grey-600);
     background: transparent;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     border: 1px solid var(--color-grey-600);
     transition: all 0.3s ease;
 
